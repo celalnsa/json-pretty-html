@@ -135,7 +135,7 @@ const printObject = (object: object, out: PrintWriter, idt: number, selection: o
   out.checkCircular(object);
   out.print('{');
   out.newLine();
-  const keys = Object.keys(object);
+  const keys = Object.keys(object).sort();
   for (let i = 0; i < keys.length; i++) {
     const key = keys[i];
     const value = object[key];
